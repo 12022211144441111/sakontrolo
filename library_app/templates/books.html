@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books</h1>
+
+    {% for title, pages in books.items %}
+        <p>{{ title }}</p>
+        <p>{{ pages}} pages</p>
+        {% if pages > 300 %}
+            <p> Long Book </p>
+        {% else %}
+            <p> Short Book </p>
+        {% endif %}
+    {% endfor %}
+
+</body>
+</html>
